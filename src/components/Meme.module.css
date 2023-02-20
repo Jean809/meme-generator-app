@@ -1,0 +1,33 @@
+.formContainer {
+  display: flex;
+  justify-content: center;
+  margin: 80px 0px 0px 0px;
+}
+
+.firstWord {
+  width: 260px;
+  height: 40px;
+  margin: 0px 20px 0px 0px;
+  border-radius: 5px;
+  border: 2px solid #d5d4d89e;
+  text-indent: 10px;
+}
+
+.secondWord {
+  width: 260px;
+  height: 40px;
+  border-radius: 5px;
+  border: 2px solid #d5d4d89e;
+  text-indent: 10px;
+}
+
+.submit {
+  margin: 20px 0px 0px 0px;
+  width: 540px;
+  height: 40px;
+  color: white;
+  font-size: 17px;
+  background: linear-gradient(90deg, #672280 1.18%, #a626d3 100%);
+  border-radius: 5px;
+  border: none;
+}
