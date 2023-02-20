@@ -1,0 +1,28 @@
+.mainContainer {
+  display: flex;
+  background-color: #9722c9;
+  padding: 25px 0px 25px 0px;
+}
+
+.trollFace {
+  width: 60px;
+  margin: 0px 15px 0px 0px;
+}
+
+.textContainer {
+  width: 100%;
+  display: flex;
+  margin: 7px 0px 0px 0px;
+  justify-content: space-between;
+}
+
+p {
+  margin: 8px 60px 0px 0px;
+  color: rgba(255, 255, 255, 0.841);
+}
+
+h2 {
+  color: white;
+  font-weight: 500;
+  text-shadow: 2px 2px black;
+}
