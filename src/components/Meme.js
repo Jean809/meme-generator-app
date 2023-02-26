@@ -1,9 +1,24 @@
+import { useState } from "react";
 import MemeCSS from "./Meme.module.css";
+import memesData from "./memesData";
 
-function Meme() {
+function Meme(props) {
+  let [currentImage, setCurrentImage] = useState("");
+
+  function handleClick() {
+    let randomNumber = Math.floor(Math.random() * memesData.data.memes.length);
+    const url = memesData.data.memes[randomNumber].url;
+
+    function getMemeImage() {
+      setCurrentImage(url);
+      console.log(currentImage);
+    }
+    getMemeImage();
+  }
+
   return (
     <main>
-      <form className={MemeCSS.formContainer}>
+      <div className={MemeCSS.formContainer}>
         <div>
           <div>
             <input
@@ -23,13 +38,17 @@ function Meme() {
           </div>
           <div>
             <input
+              onClick={handleClick}
               className={MemeCSS.submit}
               type="submit"
               value="Get a new meme image 🎁"
             ></input>
           </div>
+          <div className="img-container">
+            <img className="meme-image" src={currentImage} width="539"></img>
+          </div>
         </div>
-      </form>
+      </div>
     </main>
   );
 }

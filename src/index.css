@@ -4,3 +4,11 @@
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
 }
+
+.img-container {
+  margin: 40px 0px 0px 0px;
+}
+
+.meme-image {
+  border-radius: 3px;
+}
