@@ -3,14 +3,20 @@ import MemeCSS from "./Meme.module.css";
 import memesData from "./memesData";
 
 function Meme(props) {
-  let [currentImage, setCurrentImage] = useState("");
+  let [currentImage, setCurrentImage] = useState({
+    topText: "",
+    bottomText: "",
+    randomImage: "http://i.imgflip.com/1bij.jpg",
+  });
 
   function handleClick() {
     let randomNumber = Math.floor(Math.random() * memesData.data.memes.length);
     const url = memesData.data.memes[randomNumber].url;
 
     function getMemeImage() {
-      setCurrentImage(url);
+      setCurrentImage(function (prevState) {
+        return { ...prevState, randomImage: url };
+      });
       console.log(currentImage);
     }
     getMemeImage();
@@ -45,7 +51,11 @@ function Meme(props) {
             ></input>
           </div>
           <div className="img-container">
-            <img className="meme-image" src={currentImage} width="539"></img>
+            <img
+              className="meme-image"
+              src={currentImage.randomImage}
+              width="539"
+            ></img>
           </div>
         </div>
       </div>
